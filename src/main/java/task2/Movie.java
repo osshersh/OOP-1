@@ -1,17 +1,15 @@
 package task2;
 
 public class Movie {
-    private String filmTitle;
-    private String nameProducer;
-    private String sureNameProducer;
-    private double lengthFilm;
-    private int yearReleased;
+    private final String title;
+    private final String directorName;
+    private final double length;
+    private final int releaseYear;
 
-    public Movie(String title, String nameProducer, String sureNameProducer, double lengthFilm, int yearReleased) {
-        this.filmTitle = title;
-        this.nameProducer = nameProducer;
-        this.sureNameProducer = sureNameProducer;
-        this.lengthFilm = lengthFilm;
-        this.yearReleased = yearReleased;
+    public Movie(String title, String directorName, double length, int releaseYear) {
+        this.title = title;
+        this.directorName = directorName;
+        this.length = length;
+        this.releaseYear = releaseYear;
     }
 }
