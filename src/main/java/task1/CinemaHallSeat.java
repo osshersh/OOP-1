@@ -8,6 +8,7 @@ public class CinemaHallSeat {
     public CinemaHallSeat(int seatNumber, int rowNumber){
         this.seatNumber = seatNumber;
         this.rowNumber = rowNumber;
+        this.isFree = true;
     }
 
     public void setFree(boolean free) {
