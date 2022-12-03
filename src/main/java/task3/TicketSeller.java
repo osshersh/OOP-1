@@ -1,19 +1,17 @@
 package task3;
 
 public class TicketSeller extends BaseEmployee {
-
-    public TicketSeller(int yearEmployment, double salary) {
-        super(salary, yearEmployment);
+    public TicketSeller(int yearEmployment) {
+        super(yearEmployment);
     }
 
     @Override
     public double calculateMonthlySalary() {
-        return salary;
+        return getSalary();
     }
 
     @Override
-    public int getExperienceYear() {
-        short presentYear = 2022;
+    public double calculateSeniority() {
         return 2022 - yearEmployment;
     }
 }
