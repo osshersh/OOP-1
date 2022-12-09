@@ -1,10 +1,18 @@
 package task3;
 
 public abstract class BaseEmployee {
+    private final static int BASIC_SALARY = 3000;
     private final String firstname;
     private final String lastName;
     private final int yearOfEmployment;
     private final int basicSalary;
+
+    public BaseEmployee(String firstname, String lastName, int yearOfEmployment) {
+        this.firstname = firstname;
+        this.lastName = lastName;
+        this.yearOfEmployment = yearOfEmployment;
+        this.basicSalary = BASIC_SALARY;
+    }
 
     public BaseEmployee(String firstname, String lastName, int yearOfEmployment, int basicSalary) {
         this.firstname = firstname;

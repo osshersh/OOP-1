@@ -1,10 +1,9 @@
 package task3;
 
 public class TicketSeller extends BaseEmployee {
-    public final static int BASIC_SALARY = 3000;
 
     public TicketSeller(String firstName, String lastName, int yearOfEmployment) {
-        super(firstName, lastName, yearOfEmployment, BASIC_SALARY);
+        super(firstName, lastName, yearOfEmployment);
     }
 
     public TicketSeller(String firstName, String lastName, int yearOfEmployment, int basicSalary) {
@@ -13,6 +12,6 @@ public class TicketSeller extends BaseEmployee {
 
     @Override
     public int calculateMonthlySalary() {
-        return BASIC_SALARY;
+        return getBasicSalary();
     }
 }
