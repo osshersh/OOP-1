@@ -1,28 +1,37 @@
 package task3;
 
 public abstract class BaseEmployee {
-    public String firstname;
-    public String lastName;
-    public final double salary;
-    public final int yearEmployment;
+    private final String firstname;
+    private final String lastName;
+    private final int yearOfEmployment;
+    private final int basicSalary;
 
-    public double getSalary() {
-        return salary;
+    public BaseEmployee(String firstname, String lastName, int yearOfEmployment, int basicSalary) {
+        this.firstname = firstname;
+        this.lastName = lastName;
+        this.yearOfEmployment = yearOfEmployment;
+        this.basicSalary = basicSalary;
     }
 
-    public BaseEmployee(int yearEmployment) {
-        this.yearEmployment = yearEmployment;
-        this.salary = 3000;
+    public int calculateSeniority() {
+        return 2022 - yearOfEmployment;
     }
 
-    public BaseEmployee(int yearEmployment, double salary) {
-        this.yearEmployment = yearEmployment;
-        this.salary = salary;
+    public abstract int calculateMonthlySalary();
+
+    public String getFirstname() {
+        return firstname;
     }
 
-    public double calculateSeniority() {
-        return yearEmployment;
+    public String getLastName() {
+        return lastName;
     }
 
-    public abstract double calculateMonthlySalary();
+    public int getYearOfEmployment() {
+        return yearOfEmployment;
+    }
+
+    public int getBasicSalary() {
+        return basicSalary;
+    }
 }

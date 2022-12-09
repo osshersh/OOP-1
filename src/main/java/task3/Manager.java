@@ -1,27 +1,19 @@
 package task3;
 
 public class Manager extends BaseEmployee {
-    public double bonus = 500;
+    public final static int BASIC_SALARY = 5000;
+    public final static int BONUS = 500;
 
-    public void setBonus(double bonus) {
-        this.bonus = bonus;
+    public Manager(String firstName, String lastName, int yearEmployment, int basicSalary) {
+        super(firstName, lastName, yearEmployment, basicSalary);
     }
 
-    public Manager(int yearEmployment, double salary) {
-        super(yearEmployment, salary);
-    }
-
-    public Manager(int yearEmployment) {
-        super(yearEmployment, 5000);
+    public Manager(String firstName, String lastName, int yearEmployment) {
+        super(firstName, lastName, yearEmployment, BASIC_SALARY);
     }
 
     @Override
-    public double calculateMonthlySalary() {
-        return getSalary() + bonus;
-    }
-
-    @Override
-    public double calculateSeniority() {
-        return 2022 - yearEmployment;
+    public int calculateMonthlySalary() {
+        return BASIC_SALARY + BONUS;
     }
 }
